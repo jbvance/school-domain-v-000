@@ -8,7 +8,7 @@ attr_accessor :name, :roster
   end
 
   def add_student(name, grade)
-    @roster[grade] = @roster.key?(grade) || []
+    @roster[grade] = [] if !@roster.key?(grade)
     @roster[grade] << name
   end
 
